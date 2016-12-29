@@ -1,0 +1,6 @@
+<h1>{{ dish.dish_name }}</h1>
+<ul>
+    {% for ingredient in dish.ingredient_id.all %}
+        <li>{{ ingredient.ingredient_name }}</li>
+    {% endfor %}
+</ul>

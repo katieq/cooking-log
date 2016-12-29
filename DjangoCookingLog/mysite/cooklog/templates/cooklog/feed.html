@@ -1,0 +1,9 @@
+{% if latest_dish_list %}
+    <ul>
+    {% for dish in latest_dish_list %}
+        <li><a href="{% url 'cooklog:dish_detail' dish.dish_id %}">{{ dish.dish_name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
